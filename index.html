@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SheCodes Weather</title>
+    <link rel="stylesheet" href="src/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/c299012b98.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h1 id="top-city">Searching for...</h1>
+          <br />
+          <img
+            src="images/rain.jpg"
+            alt="current weather"
+            class="current-weather"
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4">
+          <div class="temperature">
+            <h3 id="current-temperature">0°</h3>
+            <h5>
+              <span class="switch"
+                ><a href="#" class="celsius-degree" id="celsius-temp">C</a>|<a
+                  href="##"
+                  class="fahrenheit-degree"
+                  id="fahrenheit-temp"
+                  >F</a
+                ></span
+              >
+            </h5>
+          </div>
+        </div>
+
+        <div class="col-4">
+          <div class="date">
+            <h4 class="current-date" id="date-now"></h4>
+            <br />
+            <p class="current-time" id="time-now"></p>
+          </div>
+
+          <form id="search-city-form">
+            <div class="mb-3">
+              <input
+                type="text"
+                placeholder="Enter the name of the city"
+                id="current-city"
+              />
+              <input type="submit" value="Search" id="search-button" />
+            </div>
+          </form>
+        </div>
+
+        <div class="col-4">
+          <div class="forecast">
+            <p id="current-state">Weather is...</p>
+            <br />
+            <p id="current-humidity">Humidity: 0%</p>
+            <br />
+            <p id="current-wind">Wind: 0 km/h</p>
+          </div>
+        </div>
+      </div>
+      <button id="locate">Where am I?</button>
+
+      <br />
+
+      <div class="row">
+        <div class="col forecast-col-1">
+          Monday <br />11°C/-1°C <br /><i class="fas fa-cloud"></i>
+        </div>
+        <div class="col forecast-col-2">
+          Tuesday<br />9°C/-1°C<br /><i class="fas fa-cloud-rain"></i>
+        </div>
+        <div class="col forecast-col-3">
+          Wednesday<br />9°C/-1°C<br /><i class="fas fa-cloud-rain"></i>
+        </div>
+        <div class="col forecast-col-4">
+          Thursday<br />11°C/-1°C<br /><i class="fas fa-cloud-sun"></i>
+        </div>
+        <div class="col forecast-col-5">
+          Friday<br />12°C/-1°C<br /><i class="fas fa-cloud-sun"></i>
+        </div>
+        <div class="col forecast-col-6">
+          Saturday<br />13°C/-1°C<br /><i class="fas fa-cloud-sun"></i>
+        </div>
+        <div class="col forecast-col-7">
+          Sunday<br />15°C/-1°C<br /><i class="fas fa-cloud-sun"></i>
+        </div>
+      </div>
+      <h4 class="reference">
+        <a href="https://github.com/AleksRu21/weather-app" target="_blank"
+          >Open-source code</a
+        >
+        by
+        <span class="developer">Aleksandra Rudyak</span>
+      </h4>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
