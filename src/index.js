@@ -33,6 +33,7 @@ if (minutes < 10) {
   minutes = `0${minutes}`;
 }
 let p = document.querySelector("#time-now");
+let city = "Amsterdam";
 p.innerHTML = `${hours}:${minutes}`;
 
 function searchData(event) {
@@ -46,7 +47,6 @@ function searchData(event) {
 function provideInformation(response) {
   let city = response.data.name;
   let h1 = document.querySelector("#top-city");
-  let temperatureElement = document.querySelector("#current-temperature");
   let condition = document.querySelector("#current-state");
   let nowCondition = response.data.weather[0].main;
   let nowHumidity = response.data.main.humidity;
@@ -62,7 +62,6 @@ function provideInformation(response) {
   condition.innerHTML = `${nowCondition}`;
   humidity.innerHTML = `Humidity is ${nowHumidity}%`;
   wind.innerHTML = `Wind is ${nowWind} km/h`;
-  temperatureElement = Math.round(response.data.main.temp);
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
