@@ -104,28 +104,28 @@ function updateInformation(response) {
 
 //C & F
 
+function showCelsiusTemperature(event) {
+  event.preventDefault();
+  fahrenheitLink.classList.remove("active");
+  celsiusLink.classList.add("active");
+  let h3 = document.querySelector("#current-temperature");
+  h3.innerHTML = `${Math.round(celsiusTemperature)}°`;
+}
+
 function showFahrenheitTemperature(event) {
   event.preventDefault();
   let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   celsiusLink.classList.remove("active");
   fahrenheitLink.classList.add("active");
-  let h3 = document.querySelector("h3");
-  h3.innerHTM = Math.round(fahrenheitTemperature);
-}
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
-
-function showCelsiusTemperature(event) {
-  event.preventDefault();
-  fahrenheitLink.classList.remove("active");
-  celsiusLink.classList.add("active");
-  let h3 = document.querySelector("h3");
-  h3.innerHTM = Math.round(fahrenheitTemperature);
+  let h3 = document.querySelector("#current-temperature");
+  h3.innerHTML = `${Math.round(fahrenheitTemperature)}°`;
 }
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsiusTemperature);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
 
 let celsiusTemperature = null;
 
