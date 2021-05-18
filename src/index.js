@@ -102,6 +102,8 @@ function updateInformation(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
+//ICON
+
 //C & F
 
 function showCelsiusTemperature(event) {
