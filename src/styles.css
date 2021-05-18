@@ -12,6 +12,7 @@ body {
   margin-top: 30px;
   margin-bottom: 60px;
   max-width: 1000px;
+  box-shadow: darkgray;
 }
 
 h1 {
