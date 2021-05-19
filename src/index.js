@@ -136,36 +136,27 @@ let celsiusTemperature = null;
 function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
-  forecastHTML =
-    forecastHTML +
-    `
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
         <div class="col forecast-col-1">
-          <div class="weather-forecast-date">Monday</div>
+          <div class="weather-forecast-date">${day}</div>
         <br />
         <div class="weather-forecast-temperatures">
           <span class="weather-forecast-temperature-max">11°C</span>/
           <span class="weather-forecast-temperature-min">-1°C</span>
         </div>
         <br />
-        <i class="fas fa-cloud"></i>
-        
+        <img
+          src="http://openweathermap.org/img/wn/50d@2x.png"
+          alt=""
+          width="42"
+        />  
       </div>
   `;
-
-  forecastHTML =
-    forecastHTML +
-    `
-    <div class="col forecast-col-2">
-      <div class="weather-forecast-date">Tuesday</div>
-      <br />
-      <div class="weather-forecast-temperatures">
-        <span class="weather-forecast-temperature-max">9°C</span>/
-        <span class="weather-forecast-temperature-min">-1°C</span>
-      </div>
-      <br />
-      <i class="fas fa-cloud-rain"></i>
-    </div>
-  `;
+  });
 
   forecastHTML = forecastHTML + `</div>`;
 
