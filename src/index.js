@@ -61,7 +61,7 @@ function provideInformation(response) {
   h3.innerHTML = `${temperature}°`;
   condition.innerHTML = `${nowCondition}`;
   humidity.innerHTML = `${nowHumidity}%`;
-  wind.innerHTML = `${nowWind}km/h`;
+  wind.innerHTML = `${nowWind} m/h`;
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
@@ -100,7 +100,7 @@ function updateInformation(response) {
   h3.innerHTML = `${temperature}°`;
   condition.innerHTML = `${nowCondition}`;
   humidity.innerHTML = `${nowHumidity}%`;
-  wind.innerHTML = `${nowWind}km/h`;
+  wind.innerHTML = `${nowWind} m/h`;
   h3 = Math.round(response.data.main.temp);
   iconElement.setAttribute(
     "src",
