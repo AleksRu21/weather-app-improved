@@ -110,8 +110,6 @@ function updateInformation(response) {
   getForecast(response.data.coord);
 }
 
-//ICON
-
 //C & F
 
 function showCelsiusTemperature(event) {
@@ -205,3 +203,20 @@ function getCurrentLocation() {
 
 let button = document.querySelector("button");
 button.addEventListener("click", getCurrentLocation);
+
+function search(city) {
+  let apiKey = "d4d65b2d65c67ac793e30f32ff741c0b";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(updateInformation);
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let searchInputElement = document.querySelector("#current-city");
+  search(searchInputElement.value);
+}
+
+let form = document.querySelector("#search-city-form");
+form.addEventListener("submit", handleSubmit);
+
+search("Amsterdam");
