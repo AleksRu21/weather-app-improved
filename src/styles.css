@@ -18,12 +18,12 @@ body {
 h1 {
   font-family: "Merriweather", serif;
   font-weight: bold;
-  font-size: 50px;
+  font-size: 80px;
   text-align: center;
   color: blue;
 }
 h3 {
-  font-size: 60px;
+  font-size: 130px;
   text-align: center;
 }
 
@@ -80,13 +80,14 @@ button {
   border-radius: 30px;
   background: #25248c;
   color: white;
+  cursor: pointer;
 }
 
 button:hover {
-  cursor: pointer;
   background: white;
   color: #25248c;
   transition: all 180ms ease-in-out;
+  cursor: pointer;
 }
 
 .row {
@@ -107,54 +108,16 @@ button:hover {
   opacity: 0.6;
 }
 
-.forecast-col-1 {
+.forecast-col {
   font-weight: bold;
-  border: 5px solid red;
   text-align: center;
+  font-size: 25px;
 }
 
-.forecast-col-2 {
-  font-weight: bold;
-  border: 5px solid orange;
-  text-align: center;
-}
-
-.forecast-col-3 {
-  font-weight: bold;
-  border: 5px solid yellow;
-  text-align: center;
-}
-
-.forecast-col-4 {
-  font-weight: bold;
-  border: 5px solid green;
-  text-align: center;
-}
-
-.forecast-col-5 {
-  font-weight: bold;
-  border: 5px solid skyblue;
-  text-align: center;
-}
-
-.forecast-col-6 {
-  color: black;
-  font-weight: bold;
-  border: 5px solid blue;
-  text-align: center;
-}
-
-.forecast-col-7 {
-  color: black;
-  font-weight: bold;
-  border: 5px solid purple;
-  text-align: center;
-}
-
-i {
+img {
   display: block;
   margin: 0 auto;
-  padding: 10px 20px;
+  width: 100px;
 }
 
 .reference {

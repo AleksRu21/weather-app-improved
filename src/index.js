@@ -158,7 +158,7 @@ function displayForecast(response) {
       forecastHTML =
         forecastHTML +
         `
-        <div class="col forecast-col-1">
+        <div class="col forecast-col">
           <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
         <br />
         <div class="weather-forecast-temperatures">
@@ -175,7 +175,7 @@ function displayForecast(response) {
             forecastDay.weather[0].icon
           }@2x.png"
           alt=""
-          width="42"
+          width="100"
         />  
       </div>
   `;
@@ -221,4 +221,4 @@ function handleSubmit(event) {
 let form = document.querySelector("#search-city-form");
 form.addEventListener("submit", handleSubmit);
 
-search("Amsterdam");
+search("Ede");
