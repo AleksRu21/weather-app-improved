@@ -204,6 +204,8 @@ function getCurrentLocation() {
 let button = document.querySelector("button");
 button.addEventListener("click", getCurrentLocation);
 
+//Showing current city when openning the app
+
 function search(city) {
   let apiKey = "d4d65b2d65c67ac793e30f32ff741c0b";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
